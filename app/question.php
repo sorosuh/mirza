@@ -4,10 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Passport\HasApiTokens;
 
 class question extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes , HasApiTokens;
     protected $date=['deleted-at'];
 
     protected $fillable=[

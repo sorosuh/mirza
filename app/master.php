@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Passport\HasApiTokens;
 
 class master extends Model
 {
+    use HasApiTokens;
+
     public function classrooms(){
         return $this->hasMany(classroom::class);
     }
