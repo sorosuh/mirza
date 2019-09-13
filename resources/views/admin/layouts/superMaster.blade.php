@@ -1,10 +1,4 @@
-<!--
- * CoreUI - Open Source Bootstrap Admin Template
- * @version v1.0.0-alpha.2
- * @link http://roxo.ir
- * Copyright (c) 2018 creativeLabs Masoud Salehi
- * @license MIT
- -->
+
  <!DOCTYPE html>
  <html lang="IR-fa" dir="rtl">
 
@@ -12,12 +6,10 @@
      <meta charset="utf-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <meta name="description" content="Roxo Administrator">
-     <meta name="author" content="Masoud Salehi">
-     <meta name="keyword" content="Bootstrap Data">
-     <link href="{{ asset('/css/all-admin.css') }}" rel="stylesheet">
-
+     <link href="{{ asset('/css/all-admin.css') }}" rel="stylesheet" type="text/css">
      <script src="https://npmcdn.com/tether@1.4.7/dist/js/tether.js"></script>
+
+
 
      <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
      <title>صفحه مدیریت</title>
@@ -141,7 +133,7 @@
                      </ul>
                  </li>
 
-                 <!--<li class="nav-item nav-dropdown">
+               {{--  <li class="nav-item nav-dropdown">
                      <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> Icons</a>
                      <ul class="nav-dropdown-items">
                          <li class="nav-item">
@@ -152,13 +144,13 @@
                          </li>
                      </ul>
                  </li>
-                 <li class="nav-item">
+                  <li class="nav-item">
                      <a class="nav-link" href="widgets.html"><i class="icon-calculator"></i> Widgets <span class="tag tag-info">NEW</span></a>
                  </li>
                  <li class="nav-item">
                      <a class="nav-link" href="charts.html"><i class="icon-pie-chart"></i> Charts</a>
-                 </li>-->
-                 <!--<li class="divider"></li>
+                 </li>
+                 <li class="divider"></li>
                  <li class="nav-title">
                      Extras
                  </li>
@@ -178,7 +170,7 @@
                              <a class="nav-link" href="pages-500.html" target="_top"><i class="icon-star"></i> Error 500</a>
                          </li>
                      </ul>
-                 </li>-->
+                 </li> --}}
 
              </ul>
          </nav>
@@ -203,101 +195,6 @@
              </li>
          </ol>
 
-         {{-- <div class="container-fluid">
-
-             <div class="animated fadeIn">
-                 <div class="row">
-                     <div class="col-sm-6 col-lg-3">
-                         <div class="card card-inverse card-primary">
-                             <div class="card-block p-b-0">
-                                 <div class="btn-group pull-left">
-                                     <button type="button" class="btn btn-transparent active dropdown-toggle p-a-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                         <i class="icon-settings"></i>
-                                     </button>
-                                     <div class="dropdown-menu dropdown-menu-right">
-                                         <a class="dropdown-item" href="#">Action</a>
-                                         <a class="dropdown-item" href="#">Another action</a>
-                                         <a class="dropdown-item" href="#">Something else here</a>
-                                     </div>
-                                 </div>
-                                 <h4 class="m-b-0">9.823</h4>
-                                 <p>کاربر آنلاین</p>
-                             </div>
-                             <div class="chart-wrapper p-x-1" style="height:70px;">
-                                 <canvas id="card-chart1" class="chart" height="70"></canvas>
-                             </div>
-                         </div>
-                     </div> --}}
-                     <!--/col-->
-
-                     {{-- <div class="col-sm-6 col-lg-3">
-                         <div class="card card-inverse card-info">
-                             <div class="card-block p-b-0">
-                                 <button type="button" class="btn btn-transparent active p-a-0 pull-left">
-                                     <i class="icon-location-pin"></i>
-                                 </button>
-                                 <h4 class="m-b-0">9.823</h4>
-                                 <p>کاربر آنلاین</p>
-                             </div>
-                             <div class="chart-wrapper p-x-1" style="height:70px;">
-                                 <canvas id="card-chart2" class="chart" height="70"></canvas>
-                             </div>
-                         </div>
-                     </div>
-                     <!--/col-->
-
-                     <div class="col-sm-6 col-lg-3">
-                         <div class="card card-inverse card-warning">
-                             <div class="card-block p-b-0">
-                                 <div class="btn-group pull-left">
-                                     <button type="button" class="btn btn-transparent active dropdown-toggle p-a-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                         <i class="icon-settings"></i>
-                                     </button>
-                                     <div class="dropdown-menu dropdown-menu-right">
-                                         <a class="dropdown-item" href="#">Action</a>
-                                         <a class="dropdown-item" href="#">Another action</a>
-                                         <a class="dropdown-item" href="#">Something else here</a>
-                                     </div>
-                                 </div>
-                                 <h4 class="m-b-0">9.823</h4>
-                                 <p>کاربر آنلاین</p>
-                             </div>
-                             <div class="chart-wrapper" style="height:70px;">
-                                 <canvas id="card-chart3" class="chart" height="70"></canvas>
-                             </div>
-                         </div>
-                     </div>
-                     <!--/col-->
-
-                     <div class="col-sm-6 col-lg-3">
-                         <div class="card card-inverse card-danger">
-                             <div class="card-block p-b-0">
-                                 <div class="btn-group pull-left">
-                                     <button type="button" class="btn btn-transparent active dropdown-toggle p-a-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                         <i class="icon-settings"></i>
-                                     </button>
-                                     <div class="dropdown-menu dropdown-menu-right">
-                                         <a class="dropdown-item" href="#">Action</a>
-                                         <a class="dropdown-item" href="#">Another action</a>
-                                         <a class="dropdown-item" href="#">Something else here</a>
-                                     </div>
-                                 </div>
-                                 <h4 class="m-b-0">9.823</h4>
-                                 <p>کاربر آنلاین</p>
-                             </div>
-                             <div class="chart-wrapper p-x-1" style="height:70px;">
-                                 <canvas id="card-chart4" class="chart" height="70"></canvas>
-                             </div>
-                         </div>
-                     </div>
-                     <!--/col-->
-
-                 </div>
-                 <!--/row-->
-             </div>
-
-         </div> --}}
-         <!--/.container-fluid-->
             <div>
                 @yield('content')
             </div>
@@ -576,10 +473,10 @@
 
      <footer class="footer">
          <span class="text-left">
-             <a href="http://www.roxo.ir">Roxo Admin UI</a> &copy; 2018 creativeLabs.
+
          </span>
          <span class="pull-right">
-             Powered by <a href="http://www.roxo.ir">CoreUI</a>
+
          </span>
      </footer>
      <script src="{{ asset('js/all-admin.js') }}" type="application/javascript"></script>
