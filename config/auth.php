@@ -41,6 +41,12 @@ return [
             'provider' => 'users',
         ],
 
+        'master' => [
+            'driver' => 'passport',
+            'provider' => 'masters',
+
+        ],
+
         'api' => [
             'driver' => 'passport',
             'provider' => 'users',
@@ -71,10 +77,10 @@ return [
             'model' => App\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'masters' => [
+            'driver' => 'eloquent',
+            'model' => App\master::class,
+        ],
     ],
 
     /*

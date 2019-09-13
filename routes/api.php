@@ -31,6 +31,8 @@ Route::group(['namespace' => 'api'], function () {
 Route::group(['namespace' => 'api'], function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::group(['namespace' => 'admin'], function () {
+            Route::post('register', 'registerController@register');
+            Route::post('login',  'loginController@login');
             Route::post('question', 'questionsManagmentController@create');
             Route::post('editQuestionPrice/{id}', 'questionsManagmentController@editPrice');
             Route::post('editQuestion/{id}', 'questionsManagmentController@editQuestion');
@@ -40,9 +42,15 @@ Route::group(['namespace' => 'api'], function () {
             Route::post('editClass/{id}', 'classroomsManagmentController@editClass');
             Route::post('showStudents', 'studentManagmentController@show');
             Route::post('editStudents/{id}', 'studentManagmentController@editStudent');
-
             Route::post('upload', 'questionsManagmentController@uploadQuestion');
         });
     });
 });
+
+// Route::group(['namespace' => 'api'], function () {
+//     Route::group(['prefix' => 'admin'], function () {
+//         Route::post('editClass', 'classroomsManagmentController@editClass') ;
+//     });
+// });
+
 

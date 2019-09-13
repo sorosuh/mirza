@@ -2,12 +2,23 @@
 
 namespace App;
 
+use App\Http\Middleware\Authenticate;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Laravel\Passport\HasApiTokens;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class master extends Model
+class master extends Authenticatable
 {
-    use HasApiTokens;
+    use HasApiTokens, Notifiable;
+
+
+    protected $table = 'masters';
+
+    protected $fillable=[
+        'name','family','password',
+    ];
 
     public function classrooms(){
         return $this->hasMany(classroom::class);

@@ -22,30 +22,32 @@ Route::get('/', function () {
 });
 
 
-Route::get('test',function(){
-    $user = User::find(1);
-    foreach ($user->questions as $q) {
-        return $q;
-    }
-});
+// Route::get('test',function(){
+//     $user = User::find(1);
+//     foreach ($user->questions as $q) {
+//         return $q;
+//     }
+// });
 
-Route::get('test2',function(){
-    $user = User::find(2);
-    foreach ($user->contacts as $q) {
-        return $q;
-    }
-});
+// Route::get('test2',function(){
+//     $user = User::find(2);
+//     foreach ($user->contacts as $q) {
+//         return $q;
+//     }
+// });
 
-Route::get('test3',function(){
-    $master = master::find(1);
-    foreach ($master->questions as $question) {
-        echo $question;
-    }
-});
+// Route::get('test3',function(){
+//     $master = master::find(1);
+//     foreach ($master->questions as $question) {
+//         echo $question;
+//     }
+// });
 
-Route::get('test4',function(){
-    $User = User::find(6);
-    foreach ($User->masters as $master) {
-        echo $master;
-    }
-});
+// Route::get('test4',function(){
+//     $User = User::find(6);
+//     foreach ($User->masters as $master) {
+//         echo $master;
+//     }
+// });
+
+Route::resource('superAdmin', 'superAdmin\superAdminController');
