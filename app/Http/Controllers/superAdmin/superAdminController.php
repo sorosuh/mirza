@@ -4,6 +4,7 @@ namespace App\Http\Controllers\superAdmin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\View\View;
 
 class superAdminController extends Controller
@@ -15,7 +16,8 @@ class superAdminController extends Controller
      */
     public function index()
     {
-        return View('admin.users.index');
+        $students = User::all();
+        return View('admin.users.index',compact(['students']));
     }
 
     /**
@@ -58,7 +60,7 @@ class superAdminController extends Controller
      */
     public function edit($id)
     {
-        return View('admin.users.edit');
+
     }
 
     /**
