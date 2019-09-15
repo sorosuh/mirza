@@ -16,6 +16,7 @@ use App\masster;
 use App\master;
 use App\question;
 use App\User;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
@@ -51,3 +52,4 @@ Route::get('/', function () {
 // });
 
 Route::resource('superAdmin', 'superAdmin\superAdminController');
+Route::get('information/{id}', 'superAdmin\UsersInfoController@showQuestions');

@@ -4,7 +4,10 @@ namespace App\Http\Controllers\superAdmin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\editUserRequest;
 use App\User;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
 class superAdminController extends Controller
@@ -49,7 +52,7 @@ class superAdminController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -60,7 +63,8 @@ class superAdminController extends Controller
      */
     public function edit($id)
     {
-
+        $user = User::findOrfail($id);
+        return View('admin.users.edit',compact(['user']));
     }
 
     /**
@@ -70,9 +74,19 @@ class superAdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(editUserRequest $request,$id)
     {
-        //
+         $user = User::find($id);
+         $user = User::findOrfail($id);
+         $user->name = $request->name;
+         $user->family = $request->family;
+         $user->major = $request->major;
+         $user->phone = $request->phone;
+         $user->email = $request->email;
+         $user->password =bcrypt( $request->password);
+         $user->save();
+         Session::flash('update_user', 'کاربر با موفقیت ویرایش شد');
+         return redirect('/mirza%28main%29/mirza/public/superAdmin');
     }
 
     /**
@@ -83,6 +97,10 @@ class superAdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = find($id);
+        $user->delete();
+        Session::flash('delete_user', 'کاربر با موفقیت حذف شد');
+        return Redirect('superAdmin');
+
     }
 }

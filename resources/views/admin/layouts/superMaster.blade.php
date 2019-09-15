@@ -29,8 +29,9 @@
  <body class="navbar-fixed sidebar-nav fixed-nav">
      <header class="navbar">
          <div class="container-fluid">
+
              <button class="navbar-toggler mobile-toggler hidden-lg-up" type="button">&#9776;</button>
-             <a class="navbar-brand" href="#"></a>
+             {{-- <a class="navbar-brand" href="#"></a> --}}
              <ul class="nav navbar-nav hidden-md-down">
                  <li class="nav-item">
                      <a class="nav-link navbar-toggler layout-toggler" href="#">&#9776;</a>
@@ -45,7 +46,8 @@
                  <li class="nav-item p-x-1">
                      <a class="nav-link" href="#">Settings</a>
                  </li>-->
-             </ul>
+
+            </ul>
              <ul class="nav navbar-nav pull-left hidden-md-down">
                  <li class="nav-item">
                      <a class="nav-link aside-toggle" href="#"><i class="icon-bell"></i><span class="tag tag-pill tag-danger">5</span></a>
@@ -58,7 +60,7 @@
                  </li>
                  <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                         <img src="img/avatars/roxo-avatar.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                         {{-- <img src="img/avatars/roxo-avatar.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"> --}}
                          <span class="hidden-md-down">مدیر</span>
                      </a>
                      <div class="dropdown-menu dropdown-menu-right">
@@ -92,10 +94,12 @@
                   <li class="nav-item">
                      <a class="nav-link" href="#"><i class="icon-user-follow"></i> ثبت کاربر</a>
                      <a class="nav-link" href="{{route('superAdmin.index')}}"><i class="icon-people"></i> لیست دانشجویان</a>
-                     <a class="nav-link" href="#"><i class="icon-user-following"></i> دسترسی کاربران</a>
+                     <a class="nav-link" href="#"><i class="icon-user-following"></i> لیست اساتید</a>
+                     <a class="nav-link" href="#"><i class="icon-user-following"></i> لیست سوالات</a>
+                     <a class="nav-link" href="#"><i class="icon-user-following"></i> لیست کلاس ها</a>
                  </li>
 
-                 <li class="nav-title">
+                 {{-- <li class="nav-title">
                     مدیریت فایل ها
                  </li>
                   <li class="nav-item">
@@ -131,9 +135,9 @@
                              <a class="nav-link" href="components-tables.html"><i class="icon-puzzle"></i> Tables</a>
                          </li>
                      </ul>
-                 </li>
+                 </li> --}}
 
-               {{--  <li class="nav-item nav-dropdown">
+                {{-- <li class="nav-item nav-dropdown">
                      <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> Icons</a>
                      <ul class="nav-dropdown-items">
                          <li class="nav-item">
@@ -224,7 +228,7 @@
                  <hr class="transparent m-x-1 m-y-0">
                  <div class="callout callout-warning m-a-0 p-y-1">
                      <div class="avatar pull-xs-right">
-                         <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                         {{-- <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"> --}}
                      </div>
                      <div>Meeting with
                          <strong>Lucas</strong>
@@ -471,14 +475,14 @@
          </div>
      </aside>
 
-     <footer class="footer">
+     {{-- <footer class="footer">
          <span class="text-left">
 
          </span>
          <span class="pull-right">
 
          </span>
-     </footer>
+     </footer> --}}
      <script src="{{ asset('js/all-admin.js') }}" type="application/javascript"></script>
  </body>
 
