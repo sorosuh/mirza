@@ -50,11 +50,19 @@ class superAdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(editUserRequest $request,$id)
     {
+        dd($id);
 
-    }
-
+        // $user = User::where('id',$id)->update([
+        //     'name'=> $request->name,
+        //     'family'=> $request->family,
+        //     'email'=> $request->email,
+        //     'phone'=> $request->phone,
+        //     'major'=>$request->major,
+        // ]);
+        // return 'success';
+        }
     /**
      * Show the form for editing the specified resource.
      *
@@ -76,17 +84,7 @@ class superAdminController extends Controller
      */
     public function update(editUserRequest $request,$id)
     {
-         $user = User::find($id);
-         $user = User::findOrfail($id);
-         $user->name = $request->name;
-         $user->family = $request->family;
-         $user->major = $request->major;
-         $user->phone = $request->phone;
-         $user->email = $request->email;
-         $user->password =bcrypt( $request->password);
-         $user->save();
-         Session::flash('update_user', 'کاربر با موفقیت ویرایش شد');
-         return redirect('/mirza%28main%29/mirza/public/superAdmin');
+            dd($id);
     }
 
     /**

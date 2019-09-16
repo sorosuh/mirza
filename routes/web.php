@@ -53,3 +53,10 @@ Route::get('/', function () {
 
 Route::resource('superAdmin', 'superAdmin\superAdminController');
 Route::get('information/{id}', 'superAdmin\UsersInfoController@showQuestions');
+Route::get('masters', 'superAdmin\mastersInfoController@show');
+
+ Route::get('update/{id}', 'superAdmin\AdminController@update');
+
+Route::get('editmaster/{id}', 'mastersInfoController@edit');
+
+

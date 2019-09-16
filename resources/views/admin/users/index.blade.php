@@ -2,8 +2,9 @@
 
 
 @section('content')
-    <h1>لیست دانشجویان</h1>
-    <table class="table table-hover">
+
+    <table class="table table-hover  table table-bordered  " style="margin-right:10px;">
+         <h3>لیست دانشجویان</h3>
         <tr>
             <th>id</th>
             <th>نام</th>
@@ -24,7 +25,7 @@
                 <td>{{$student->phone}}</td>
                 <td><a  href="{{route('superAdmin.edit',$student->id)}}"><button type="button" class="btn btn-warning">ویرایش</button></a></td>
                 <td><a href="{{route('superAdmin.destroy',$student->id)}}"><button type="button" class="btn btn-danger">حذف</button></a></td>
-                <td><a href="information\{{$student->id}}"><button type="button" class="btn btn-info">مشخصات</button></a></td>
+                <td><a href="information/{{$student->id}}"><button type="button" class="btn btn-info">مشخصات</button></a></td>
             </tr>
         @endforeach
 

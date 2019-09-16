@@ -85,7 +85,7 @@
          <nav class="sidebar-nav">
              <ul class="nav">
                  <li class="nav-item">
-                     <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> داشبرد <span class="tag tag-info">جدید</span></a>
+                     <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> <span style="color:aqua; font-size:20px;">Q</span><span style="color:crimson;  font-size:20px;">bazzar</span>
                  </li>
 
                  <li class="nav-title">
@@ -94,7 +94,7 @@
                   <li class="nav-item">
                      <a class="nav-link" href="#"><i class="icon-user-follow"></i> ثبت کاربر</a>
                      <a class="nav-link" href="{{route('superAdmin.index')}}"><i class="icon-people"></i> لیست دانشجویان</a>
-                     <a class="nav-link" href="#"><i class="icon-user-following"></i> لیست اساتید</a>
+                     <a class="nav-link" href="masters"><i class="icon-user-following"></i> لیست اساتید</a>
                      <a class="nav-link" href="#"><i class="icon-user-following"></i> لیست سوالات</a>
                      <a class="nav-link" href="#"><i class="icon-user-following"></i> لیست کلاس ها</a>
                  </li>

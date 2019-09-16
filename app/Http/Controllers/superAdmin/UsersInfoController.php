@@ -12,7 +12,7 @@ class UsersInfoController extends Controller
     public function showQuestions($id){
         $user = User::find($id);
         $questions = $user->questions;
-        return View('admin.users.info',compact('questions'));
+        return View('admin.users.info',compact(['questions','user']));
     }
 
     public function editQuestions($id){
